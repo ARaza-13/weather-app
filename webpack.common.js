@@ -1,7 +1,16 @@
+const DotenvWebpackPlugin = require("dotenv-webpack");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+
 module.exports = {
   entry: {
     app: "./src/index.js",
   },
+  plugins: [
+    new NodePolyfillPlugin({
+      additionalAliases: ["process", "punycode"],
+    }),
+    new DotenvWebpackPlugin(),
+  ],
   module: {
     rules: [
       {
@@ -27,14 +36,12 @@ module.exports = {
         test: /\.(?:js|mjs|cjs)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: [
-              ['@babel/preset-env', { targets: "defaults" }]
-            ],
-            plugins: ['@babel/plugin-proposal-class-properties']
-          }
-        }
+            presets: [["@babel/preset-env", { targets: "defaults" }]],
+            plugins: ["@babel/plugin-proposal-class-properties"],
+          },
+        },
       },
     ],
   },
