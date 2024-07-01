@@ -1,8 +1,14 @@
 import Data from "./data";
+import Validate from "./validation";
 
 export default class Controller {
   static async searchWeather() {
-    const location = document.getElementById("weather-input").value;
+    const location = Validate.getInputFromSearch();
+
+    if (!Validate.validateInput(location)) {
+      return;
+    }
+
     try {
       const weatherData = await Data.fetchWeather(location);
       console.log(weatherData);

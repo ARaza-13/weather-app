@@ -1,6 +1,7 @@
 :root {
   --accent: #04aa6d;
   --text-light: #eaebec;
+  --error: #ff0606;
 }
 
 * {
@@ -11,7 +12,7 @@
 
 input {
   border: 1px solid #aaa;
-  width: 15%;
+  width: 100%;
   border-radius: 5px;
   padding: 10px;
 }
@@ -34,4 +35,18 @@ button {
   justify-content: center;
   align-items: center;
   gap: 8px;
+}
+
+.search-bar {
+  width: 15%;
+  position: relative;
+}
+
+.error {
+  color: var(--error);
+  font-size: 16px;
+  position: absolute;
+  left: 2px;
+  bottom: -21px;
+  white-space: nowrap;
 }
