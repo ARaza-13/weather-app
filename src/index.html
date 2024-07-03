@@ -6,8 +6,7 @@
     <title>Weather App</title>
   </head>
   <body>
-    <header></header>
-    <main>
+    <header>
       <div class="search-form" id="search-form">
         <div class="search-bar">
           <input class="input" id="weather-input" type="text" />
@@ -15,7 +14,39 @@
         </div>
         <button class="submit" id="submit-button">Search</button>
       </div>
+    </header>
+    <main>
+      <div class="weather-card" id="weather-card">
+        <div class="weather-heading" id="weather-heading">
+          <div class="location" id="location"></div>
+          <div class="date" id="date"></div>
+          <div class="time" id="time"></div>
+        </div>
+        <div class="weather" id="weather">
+          <div class="weather-display">
+            <img class="weather-icon" id="weather-icon" src="#"></img>
+            <div class="description" id="description"></div>
+          </div>
+          <div class="weather-description">
+            <div class="temperature" id="temperature"></div>
+            <div class="feels-like" id="feels-like"></div>
+          </div>
+        </div>
+        <div class="weather-details" id="weather-details">
+          <div class="detail">
+            <div class="detail-title">Wind: </div>
+            <div class="detail-data" id="wind"></div>
+          </div>
+          <div class="detail">
+            <div class="detail-title">Humidity: </div>
+            <div class="detail-data" id="humidity"></div>
+          </div>
+          <div class="detail">
+            <div class="detail-title">Cloudiness: </div>
+            <div class="detail-data" id="cloudiness"></div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer></footer>
   </body>
 </html>
