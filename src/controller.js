@@ -27,6 +27,7 @@ export default class Controller {
     const weatherObj = Data.extractWeatherData(weatherData);
     console.log(weatherObj);
 
+    const weatherCard = document.getElementById("weather-card");
     const location = document.getElementById("location");
     const weatherIcon = document.getElementById("weather-icon");
     const description = document.getElementById("description");
@@ -44,5 +45,7 @@ export default class Controller {
     wind.textContent = weatherObj.windMph;
     humidity.textContent = weatherObj.humidity;
     cloudiness.textContent = weatherObj.cloud;
+
+    weatherCard.classList.remove("hidden");
   }
 }

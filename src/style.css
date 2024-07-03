@@ -31,6 +31,10 @@ main {
   background-color: var(--bg-dark-1);
 }
 
+.hidden {
+  display: none !important;
+}
+
 .search-form {
   display: flex;
   justify-content: center;
@@ -80,7 +84,8 @@ button {
   align-items: center;
   font-size: 24px;
   color: var(--text-light);
-  max-width: 600px;
+  max-width: 700px;
+  min-width: 450px;
   background-color: var(--bg-dark-2);
   border-radius: 5px;
   padding: 2rem;
