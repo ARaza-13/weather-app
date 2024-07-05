@@ -1,9 +1,5 @@
 import "./style.css";
-import Controller from "./controller";
+import DOMManager from "./dom";
 require("dotenv").config();
 
-const searchButton = document.getElementById("submit-button");
-
-searchButton.onclick = () => {
-  Controller.searchWeather();
-};
+DOMManager.initialize();
