@@ -64,6 +64,7 @@ export default class Controller {
 
     const weatherCard = document.getElementById("weather-card");
     const location = document.getElementById("location");
+    const date = document.getElementById("date");
     const weatherIcon = document.getElementById("weather-icon");
     const description = document.getElementById("description");
     const temperature = document.getElementById("temperature");
@@ -79,10 +80,12 @@ export default class Controller {
     cloudiness.textContent = weatherObj.cloud;
 
     if (this.currentUnits === "metric") {
+      date.textContent = weatherObj.dateMetric;
       temperature.textContent = weatherObj.temperatureC;
       feelTemperature.textContent = weatherObj.feelTemperatureC;
       wind.textContent = weatherObj.windKph;
     } else {
+      date.textContent = weatherObj.dateImperial;
       temperature.textContent = weatherObj.temperatureF;
       feelTemperature.textContent = weatherObj.feelTemperatureF;
       wind.textContent = weatherObj.windMph;
