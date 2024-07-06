@@ -1,1 +1,0 @@
-{"version":3,"file":"app.64d2dfc00e85399082a6.css","mappings":"AAAA,EACE,qBAAsB,CACtB,QAAS,CACT,SACF","sources":["webpack://weather-app/./src/style.css"],"sourcesContent":["* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n"],"names":[],"sourceRoot":""}
