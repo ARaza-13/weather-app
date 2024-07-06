@@ -2,7 +2,6 @@ import Validate from "./validation";
 
 export default class Data {
   static async fetchWeather(location) {
-    const errorMsg = document.getElementById("error");
     try {
       const response = await fetch(
         `${process.env.WEATHER_API_URL}/current.json?key=${process.env.API_KEY}&q=${location}`,
@@ -22,7 +21,6 @@ export default class Data {
   }
 
   static extractWeatherData(weatherData) {
-    console.log(weatherData);
     const city = weatherData.location.name;
     const country = weatherData.location.country;
     const date = weatherData.location.localtime;
