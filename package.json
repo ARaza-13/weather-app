@@ -1,7 +1,7 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "description": "basic html, css, js template that includes Webpack startup along with ESLint and Prettier setup",
+  "description": "A weather forecast site that displays the weather data for a specific location through use of weather API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
